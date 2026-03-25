@@ -44,7 +44,7 @@ No external ML libraries required.
 ```bash
 pip install numpy
 ```
-##⚙️ Parameters
+## ⚙️ Parameters
 
 - Parameter	Description	Default
 - kind	"binary" or "multiclass"	"binary"
@@ -60,7 +60,7 @@ pip install numpy
 
 ---
 
-🧠 Usage
+## 🧠 Usage
 
 ```Basic Example
 model = Logistic_0(kind="binary", reg="L2", gradient="minibatch", Lr=0.01)
@@ -103,7 +103,7 @@ model = Logistic_0.load("model.pkl")
 
 ---
 
-##📊 Key Methods
+## 📊 Key Methods
 
 - Training
   - train(X, y, Xt, yt, epochs)
@@ -125,7 +125,7 @@ model = Logistic_0.load("model.pkl")
 
 ---
 
-##🧩 Internal Design (High-Level)
+## 🧩 Internal Design (High-Level)
 
 - Forward pass:
   - Binary → Sigmoid
@@ -141,7 +141,7 @@ model = Logistic_0.load("model.pkl")
 
 ---
 
-⚠️ Limitations 
+## ⚠️ Limitations 
 
 - Not production-ready (no GPU, no batching optimizations)
 - No advanced metrics (precision, recall, F1)
