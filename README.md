@@ -13,7 +13,7 @@ Supports **binary + multiclass classification**, multiple optimizers, regulariza
   - Adam
   - Momentum
   - RMSProp
-  - Lion (rare, good signal)
+  - Lion 
 - ✅ Regularization:
   - L1 (Lasso)
   - L2 (Ridge)
@@ -121,7 +121,7 @@ Vectorized gradients
 Regularization added to:
 Loss
 Gradient update
-⚠️ Limitations (Be Honest)
+⚠️ Limitations 
 Not production-ready (no GPU, no batching optimizations)
 No advanced metrics (precision, recall, F1)
 No cross-validation
