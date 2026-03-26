@@ -60,7 +60,8 @@ class Logistic:
     >>> model = Logistic(kind="binary", reg="L2", gradient="minibatch", Lr=0.01)
     >>> X = model.select_features(X,labels)
     >>> X = model.drop_features(X,labels)
-    >>> X = model.label_encoder(X,labels)
+    >>> D = model.label_encoder(X+y,labels)
+    >>> X,y = D[:,:-1],D[:,-1]
     >>> X = model.clean(X)
     >>> X = model.normalization(X)
     >>> X_train, X_test, y_train, y_test = model.split(X, y, seed=42, shuffle=True)
