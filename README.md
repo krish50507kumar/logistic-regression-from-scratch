@@ -81,7 +81,8 @@ X = model.select_features(X, labels)
 X = model.drop_features(X, labels)
 
 # Encoding + cleaning
-X = model.label_encoder(X, labels)
+D = model.label_encoder(X+y,labels)
+X,y = D[:,:-1],D[:,-1]
 X = model.clean(X)
 
 # Normalization
