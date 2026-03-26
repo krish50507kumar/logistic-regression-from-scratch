@@ -1,5 +1,5 @@
 # logistic-regression-from-scratch
-# Logistic_0 — Custom Logistic Regression from Scratch
+# Logistic — Custom Logistic Regression from Scratch
 
 A fully customizable **Logistic Regression implementation** built from scratch using NumPy.  
 Supports **binary + multiclass classification**, multiple optimizers, regularization methods, and preprocessing utilities.
@@ -99,7 +99,7 @@ print(model.score(X_test, y_test))
 
 # Save & Load
 model.save("model.pkl")
-model = Logistic_0.load("model.pkl")
+model = Logistic.load("model.pkl")
 ```
 
 ---
