@@ -68,7 +68,7 @@ class Logistic:
     >>> model.train(X_train, y_train, X_test, y_test, epochs=500)
     >>> accuracy = model.score(X_test, y_test)
     >>> model.save(path)
-    >>> model = Logistic_0.load(path)
+    >>> model = Logistic.load(path)
     """
     def __init__(self, kind = "binary", reg = "L1",
                  gradient = "minibatch", optimizer = "adam",alpha = 0.5,
@@ -637,7 +637,7 @@ class Logistic:
 
         Returns
         -------
-        model : Logistic_0
+        model : Logistic
             A fully loaded and functional model instance.
         """
         import pickle
