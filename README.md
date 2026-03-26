@@ -63,7 +63,7 @@ pip install numpy
 ## 🧠 Usage
 
 ```Basic Example
-model = Logistic_0(kind="binary", reg="L2", gradient="minibatch", Lr=0.01)
+model = Logistic(kind="binary", reg="L2", gradient="minibatch", Lr=0.01)
 
 X_train, X_test, y_train, y_test = model.split(X, y, seed=42, shuffle=True)
 
@@ -74,7 +74,7 @@ print("Accuracy:", accuracy)
 ```
 ---
 ```Full Pipeline Example
-model = Logistic_0()
+model = Logistic()
 
 # Feature engineering
 X = model.select_features(X, labels)
