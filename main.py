@@ -563,7 +563,29 @@ class Logistic:
         if self.kind == "binary":
             return (self._sigmoid(z) >= 0.5).astype(int).ravel()
         return np.argmax(self._softmax(z), axis=1)
-
+        
+    def predict_proba(self,X):
+        """
+        The Predictor: Generates probability estimates for input data.
+    
+        Parameters
+        ----------
+        X : np.ndarray
+            Feature matrix to be predicted.
+    
+        Returns
+        -------
+        probabilities : np.ndarray
+            Predicted class probabilities. Returns a 1D array for binary 
+            classification or a 2D array (n_samples, n_classes) for multiclass.
+        """
+        X = self.label_encoder(X,self.encoded_labels)
+        X = (X - self.X_mean) / self.X_std
+        z = X @ self.weights + self.bias
+        if self.kind == "binary":
+            return self._sigmoid(z)
+        return self._softmax(z)
+        
     def score(self,X,y):
         """
         The Report Card: Calculates the accuracy percentage of the model's predictions.
